@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "build": "expo export --platform web",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@expo-google-fonts/oswald": "^0.2.3",
