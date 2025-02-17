@@ -1,10 +1,10 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import React, { useEffect, useState } from "react";
 import styles from "../styles";
-import { REACT_APP_WEATHER_API_KEY } from "@env";
+import { WEATHER_API_KEY } from "@env";
 
 export default function Weather() {
-  const weatherApiKey = REACT_APP_WEATHER_API_KEY;
+  const weatherApiKey = WEATHER_API_KEY;
   const location = "Philadelphia";
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
@@ -53,13 +53,31 @@ export default function Weather() {
           justifyContent: "center",
         }}
       >
-        <Text style={[styles.widgetText, { flex: 1, textAlign: "left" }]}>
-          I'm currently living in:{" "}
+        <Text
+          style={[
+            styles.widgetText,
+            {
+              flex: 1,
+              textAlign: "left",
+              fontFamily: "Konexy",
+              letterSpacing: 0.8,
+            },
+          ]}
+        >
+          Currently living in:{" "}
         </Text>
         <Text
           style={[
             styles.widgetText,
-            { textAlign: "right", fontFamily: "Roboto_500Medium" },
+            {
+              textAlign: "right",
+              fontFamily: "Konexy",
+              color: "red",
+              letterSpacing: 0.8,
+              textShadowColor: "black",
+              textShadowOffset: { width: 0.5, height: 0.5 },
+              textShadowRadius: 1,
+            },
           ]}
         >
           {weather?.location?.name}, {weather?.location?.region}
@@ -77,7 +95,7 @@ export default function Weather() {
           <Text
             style={[
               styles.widgetText,
-              { fontSize: 48, fontFamily: "Roboto_500Medium" },
+              { fontSize: 72, fontFamily: "Captain-America" },
             ]}
           >
             {weather?.current?.temp_f}°F
@@ -92,7 +110,12 @@ export default function Weather() {
             justifyContent: "center",
           }}
         >
-          <Text style={[styles.widgetText, { fontFamily: "Roboto_300Light" }]}>
+          <Text
+            style={[
+              styles.widgetText,
+              { fontFamily: "Konexy", letterSpacing: 0.8 },
+            ]}
+          >
             {weather?.current?.condition?.text}
           </Text>
           {weather?.current?.condition?.icon && (
@@ -101,7 +124,14 @@ export default function Weather() {
               style={{ width: 64, height: 64 }}
             />
           )}
-          <Text style={[styles.widgetText, {}]}>{time}</Text>
+          <Text
+            style={[
+              styles.widgetText,
+              { fontFamily: "Captain-America", fontSize: 24 },
+            ]}
+          >
+            {time}
+          </Text>
         </View>
       </View>
     </View>

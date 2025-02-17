@@ -145,8 +145,12 @@ export default function Fantasy() {
             styles.widgetText,
             {
               textAlign: "center",
-              fontSize: 24,
-              fontFamily: "Roboto_500Medium",
+              fontSize: 36,
+              fontFamily: "Progress",
+              color: "red",
+              textShadowColor: "black",
+              textShadowOffset: { width: 2, height: 2 },
+              textShadowRadius: 4,
             },
           ]}
         >
@@ -158,9 +162,11 @@ export default function Fantasy() {
         style={[
           styles.widgetText,
           {
+            textAlign: "center",
             fontSize: 20,
-            fontFamily: "Roboto_500Medium",
-            paddingBottom: 5,
+            fontFamily: "Captain-America",
+            paddingBottom: 10,
+            color: "#393939",
           },
         ]}
       >

@@ -44,7 +44,7 @@ export default function PlayerItem({ sleeperId, playersData }) {
         <View
           style={{
             flexDirection: "row",
-            justifyContent: "space-around",
+            alignItems: "center",
             width: 100,
             padding: 5,
             gap: 5,
@@ -58,8 +58,8 @@ export default function PlayerItem({ sleeperId, playersData }) {
             <Text
               style={{
                 textAlign: "left",
-                fontSize: 12,
-                fontFamily: "Oswald_400Regular",
+                fontSize: 10,
+                fontFamily: "Progress",
               }}
             >
               {playerFirstName}
@@ -67,23 +67,31 @@ export default function PlayerItem({ sleeperId, playersData }) {
             <Text
               style={{
                 textAlign: "left",
-                fontSize: 14,
-                fontFamily: "Oswald_400Regular",
+                fontSize: 15,
+                fontFamily: "Dash-Horizon",
               }}
             >
               {playerLastName}
             </Text>
           </View>
 
-          <Text
+          <View
             style={{
-              textAlign: "right",
-              fontSize: 20,
-              fontFamily: "Oswald_400Regular",
+              flex: 1,
+              alignItems: "flex-end",
+              // backgroundColor: "white",
             }}
           >
-            {playerPos}
-          </Text>
+            <Text
+              style={{
+                textAlign: "right",
+                fontSize: 18,
+                fontFamily: "Captain-America",
+              }}
+            >
+              {playerPos}
+            </Text>
+          </View>
         </View>
       </View>
     </View>

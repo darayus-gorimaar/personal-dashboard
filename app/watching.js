@@ -40,8 +40,12 @@ export default function Watching() {
             styles.widgetText,
             {
               textAlign: "center",
-              fontSize: 24,
-              fontFamily: "Roboto_500Medium",
+              fontSize: 36,
+              fontFamily: "Progress",
+              color: "red",
+              textShadowColor: "black",
+              textShadowOffset: { width: 2, height: 2 },
+              textShadowRadius: 4,
             },
           ]}
         >

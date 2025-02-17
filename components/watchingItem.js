@@ -89,15 +89,20 @@ export default function WatchingItem({ title }) {
         <Text
           style={[
             styles.widgetText,
-            { color: "white", fontFamily: "Roboto_700Bold" },
+            {
+              color: "white",
+              fontFamily: "Captain-America",
+              fontSize: 16,
+              letterSpacing: 1,
+            },
           ]}
         >
-          {title}
+          {title.toUpperCase()}
         </Text>
         <Text
           style={[
             styles.widgetText,
-            { color: "lightgray", fontFamily: "Roboto_300Light" },
+            { color: "lightgray", fontFamily: "Captain-America", fontSize: 16 },
           ]}
         >
           {yearInfo}
