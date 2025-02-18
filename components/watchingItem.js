@@ -49,7 +49,7 @@ export default function WatchingItem({ title }) {
           : firstResult?.release_date.slice(0, 4);
         setYearInfo(year);
 
-        console.log(json.results[0]);
+        // console.log(json.results[0]);
         if (posterPath) {
           setPosterPath(posterPath); // Update state with the poster path
         }
